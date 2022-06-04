@@ -8,19 +8,17 @@
 class Solution:
    
     def change(self, amount: int, coins: List[int]) -> int:
-        def dp(amount: int):
-            if amount <0:
-                return -1
-            if amount==0:
-                return 0
+        a=amount
+        c=len(coins)
+        dp=[]
+        for i in range(c+1):
+            dp.append([0]*(a+1))
 
-            for coin in coins:
-                res=dp(amount-coin)
-                if res==-1:continue
-                if res==
-                
-        dp(amount)
-        return self.ans
+        for i in range(amount):
+            for j in range(c):
+                if i-coins[j]>=0:
+                    dp[j][i]=max(dp[i-1][j]+)
+        print(dp)
 
 # @lc code=end
 
