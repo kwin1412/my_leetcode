@@ -22,6 +22,9 @@ def link_list_init():
 
     
 def preorder_traverse(head:LinkNode):
+    """
+    前序遍历，链表顺序输出
+    """
     if head==None:
         return
     
@@ -29,7 +32,30 @@ def preorder_traverse(head:LinkNode):
     preorder_traverse(head.next)
     # print(head.val)
 
+def postorder_traverse(head:LinkNode):
+    """
+    后序遍历，链表顺序输出
+    """
+    if head==None:
+        return
+    
+    
+    postorder_traverse(head.next)
+    print(head.val)
+    # print(head.val)
+
+"""
+link list example:
+    head=link_list_init()
+    preorder_traverse(head)
+    postorder_traverse(head)
+"""
+
+
 
 if __name__=="__main__":
     head=link_list_init()
     preorder_traverse(head)
+    postorder_traverse(head)
+
+
