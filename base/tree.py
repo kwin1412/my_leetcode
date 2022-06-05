@@ -161,10 +161,12 @@ tree max depth :
         nums=[3,9,20,None,None,15,7]
         root=tree_init(nums)
         print(max_depth(root))
+
+    Output:
+        3
 """
 
 if __name__=="__main__":
-
     pass
 
 
